@@ -1,0 +1,12 @@
+<div class="container text-center">
+  <h1>Your selected Cock</h1>
+  <h2><%= @cocktail.name %></h2>
+
+  <div class="ingred">
+    <h2>Ingredients: </h2>
+    <% @cocktail.ingredients.each do |cock| %>
+    <p>"<%= cock.name %>"</p>
+    <% end %>
+  </div>
+</div>
+<%= render template: 'doses/_form.html.erb' %>

@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <%= simple_form_for @cocktail do |cock| %>
+        <%= cock.input :name %>
+        <%= cock.select :ingredient, Cocktail::INGREDIENT, include_blank:"Select an ingredient" %>
+        <%= cock.submit "Add a Cocktail", class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
