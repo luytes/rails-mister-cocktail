@@ -14,6 +14,7 @@ COCKTAILS = ["Apple Martini", "Long Island Iced Tea", "Californication", "Pina C
 file = open("http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
 json = file.read
 parsed = JSON.parse(json)
+
 INGREDIENT = parsed["drinks"].map { |hash| hash.values.first  }
 
 Cocktail.destroy_all

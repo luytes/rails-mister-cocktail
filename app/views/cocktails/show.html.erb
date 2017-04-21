@@ -1,12 +1,16 @@
 <div class="container text-center">
-  <h1>Your selected Cock</h1>
+  <h1>Your selected Cocktail</h1>
   <h2><%= @cocktail.name %></h2>
-
   <div class="ingred">
     <h2>Ingredients: </h2>
-    <% @cocktail.ingredients.each do |cock| %>
-    <p>"<%= cock.name %>"</p>
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.description %> <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %></p>
+      <%= link_to "Delete", cocktail_dose_path(dose), class: "label label-warning", method: :delete %>
     <% end %>
   </div>
 </div>
 <%= render template: 'doses/_form.html.erb' %>
+<div class="text-center">
+  <%= link_to "Back", cocktails_path %>
+  <%= link_to "Edit", edit_cocktail_path %>
+</div>
