@@ -35,7 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem "simple_form"
 gem "bootstrap-sass"
-
+gem 'carrierwave', '~> 0.11.2'
+gem 'cloudinary', '1.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

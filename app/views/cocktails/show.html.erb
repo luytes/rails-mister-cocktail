@@ -14,3 +14,5 @@
   <%= link_to "Back", cocktails_path %>
   <%= link_to "Edit", edit_cocktail_path %>
 </div>
+
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
